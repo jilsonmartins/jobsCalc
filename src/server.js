@@ -9,6 +9,9 @@ server.set('view engine', 'ejs') // setando uma template engine
 // habilitar arquivos statics
 server.use(express.static("public"))
 
+// usar req.body
+server.use(express.urlencoded({ extended: true }))
+
 // routes
 server.use(routes)
 
