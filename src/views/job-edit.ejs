@@ -23,16 +23,18 @@
       rel="stylesheet"
     />
 
-    <script type="module" src="./scripts/job-edit.js"></script>
+    <script type="module" src="/scripts/job-edit.js"></script>
     
   </head>
   <body id="page-job-edit">
-
-    <%- include('parts/page-header', {title: 'Editar Job'}) %> 
+    
+    <%- include('parts/page-header', { title: 'Editar Job'}) %>
 
     <div class="container flex animate-up delay-2">
+
+""
         <form id="form-job" 
-        method="post" 
+        method="post"
         action="/job/<%= job.id %>">
 
           <fieldset>
@@ -45,7 +47,7 @@
                 type="text" 
                 id="name" 
                 name="name"
-                value="<%= job.name %>"
+                value="<%= job.name %> "
               />
             </div>
 
@@ -68,7 +70,7 @@
                   type="number"
                   id="total-hours" 
                   name="total-hours"
-                  value="<%= job["total-hours"] %>"/>
+                  value="<%= job["total-hours"] %>" />
               </div>
             </div>
           </fieldset>
@@ -120,7 +122,7 @@
       </div>
       <form 
         method="post" 
-        action="/job/delete/<%= job.id %>" 
+        action="/job/delete/<%= job.id %> " 
         id="delete-job"></form>
     </div>
     <!-- end modal-wrapper -->
